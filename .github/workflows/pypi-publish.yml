@@ -41,7 +41,7 @@ jobs:
         pip install build
     - name: Build package
       run: |
-        touch aot-packaged/aot-packaged/aot/__init__.py
+        touch aot/__init__.py
         python -m build
     - name: Store packages
       uses: actions/upload-artifact@v3
