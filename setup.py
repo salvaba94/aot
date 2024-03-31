@@ -25,10 +25,10 @@ setup_dir = os.path.dirname(__file__)
 
 
 if __name__ == "__main__":
-    with open(os.path.join(metadata["__name_module__"], "README.md"), "r") as f:
+    with open("README.md", "r") as f:
         long_description = f.read()
 
-    with open(os.path.join(metadata["__name_module__"], "LICENSE"), "r", encoding="utf-8") as f:
+    with open("LICENSE", "r", encoding="utf-8") as f:
         license = f.read()
 
     setuptools.setup(
