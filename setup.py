@@ -5,7 +5,7 @@ import glob
 metadata = {
     "__name_program__": "deaotpy",
     "__name_module__": "aot",
-    "__version__": "1.2.0",
+    "__version__": "1.3.0",
     "__url__": "https://github.com/yoxu515/aot-benchmark",
     "__description__": "Decoupling Features in Hierarchical Propagation for Video Object Segmentation.",
     "__python_requires__": ">=3.10",
