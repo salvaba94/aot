@@ -25,20 +25,12 @@ jobs:
 
     runs-on: ${{ matrix.os }}
     steps:
-    - name: Free Disk Space (Ubuntu)
-      if: ${{ matrix.os }} == 'ubuntu-latest'
-      uses: jlumbroso/free-disk-space@main
     - name: Checkout code
       uses: actions/checkout@v4
     - name: Audit packages
       uses: pypa/gh-action-pip-audit@v1.0.8
       with:
         inputs: requirements.txt
-    - name: Setup CUDA
-      uses: Jimver/cuda-toolkit@v0.2.13
-      continue-on-error: true
-      with:
-        cuda: "12.1.0"
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
@@ -48,7 +40,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install build
     - name: Build package
-      run: python -m build
+      run: |
+        touch aot/__init__.py
+        python -m build
     - name: Store packages
       uses: actions/upload-artifact@v3
       with:
