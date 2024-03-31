@@ -15,7 +15,7 @@ metadata = {
         "Operating System :: OS Independent",
         "Intended Audience :: Science/Research",
         "Programming Language :: Python :: 3",
-        "License :: BSD 3-Clause License",
+        "License :: OSI Approved :: BSD License",
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
     ],
     "__keywords__": "machine-learning, deep-learning, pytorch, "
