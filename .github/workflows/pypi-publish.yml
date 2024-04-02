@@ -46,6 +46,8 @@ jobs:
     - name: Build package
       run: |
         touch aot/__init__.py
+        touch aot/configs/__init__.py
+        touch aot/configs/models/__init__.py
         python -m build
     - name: Store packages
       uses: actions/upload-artifact@v3
